@@ -1,9 +1,10 @@
 import React from 'react';
+import EventListing from '@/components/Event'
 
 const ComponentName = (props) => {
     return (
         <div>
-            <h1>Hello, Samuel!</h1>
+            <EventListing />
         </div>
     );
 };
