@@ -19,7 +19,13 @@ const SignIn = () => {
       });
 
       console.log("Login successful:", response.data);
-      route.push('/dashboard')
+      
+      // Check the user role and redirect accordingly
+      if (response.data.role === "admin") {
+        route.push("/admin"); // Redirect to /admin if the role is admin
+      } else {
+        route.push("/dashboard"); // Otherwise, redirect to /dashboard
+      }
     } catch (error) {
       console.error("Login failed:", error);
       setErrorMessage(
