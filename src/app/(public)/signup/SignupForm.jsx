@@ -26,7 +26,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/signup", formData);
+      const response = await axios.post("https://event-management-hub-backend.onrender.com/api/auth/signup", formData);
       console.log("Sign up successful:", response.data);
       setSuccessMessage("Account created successfully!");
       setErrorMessage("");

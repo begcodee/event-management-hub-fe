@@ -31,7 +31,7 @@ const AdminPage = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/events");
+      const response = await axios.get("https://event-management-hub-backend.onrender.com/api/events");
       setEvents(response.data);
       setLoading(false);
     } catch (error) {
@@ -47,7 +47,7 @@ const AdminPage = () => {
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzVkZjdmNzBkNDE0YjEwNzNkN2Y2ZTQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzQyMTM5MzgsImV4cCI6MTczNDIxNzUzOH0.R52WcQXcagG4m16lCtt5vQ9MNfi5fedYs6Wf7ipZBUs";
 
       const response = await axios.post(
-        "http://localhost:5000/api/events",
+        "https://event-management-hub-backend.onrender.com/api/events",
         formData,
         {
           headers: {
